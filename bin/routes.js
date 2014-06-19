@@ -37,7 +37,7 @@ try {
   require(routesFile)(helper.app());
 } catch (e) {
   console.log();
-  console.log('  File not found. %s', routesFile);
+  console.log('  %s', e.message);
   console.log();
   process.exit(1);
 }
