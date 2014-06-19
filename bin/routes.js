@@ -73,13 +73,19 @@ function table(arr) {
       var n = len[name] | 0;
       var cn = item[name].length;
       var spaces = ' '.repeat(n - cn);
-      item[name] += spaces;
+
+      if (name === 'method') {
+        item[name] = spaces + item[name];
+      } else {
+        item[name] += spaces;
+      }
     });
   });
 }
 
 function printRoute(route) {
-  console.log('  %s\t%s\t%s'
+  console.log('  %s\t%s\t%s\t%s'
+    , route.method
     , chalk.cyan(route.name)
     , chalk.magenta(route.path)
     , route.middleware);
