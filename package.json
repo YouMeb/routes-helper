@@ -16,7 +16,7 @@
     "nopt": "^3.0.0"
   },
   "bin": {
-    "routes": "bin/help.js"
+    "routes": "bin/routes.js"
   },
   "directories": {
     "example": "example"
